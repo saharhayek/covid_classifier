@@ -16,7 +16,7 @@ The original work is by [@chrispathway](https://github.com/chrispathway). Their 
 - the model: MobileNetV3-Large pretrained on ImageNet, fully fine-tuned, with a new head (960 → 1,280, ReLU, 20% dropout → 3 classes)
 - the training setup: AdamW with learning rate 1e-4, batch size 16, 25 epochs
 - a port from Windows/CUDA (RTX 2060) to Apple Silicon (PyTorch MPS backend)
-- the notebook [classifier.ipynb](classifier.ipynb), the trained weights and the README figures
+- the notebook [classifier.ipynb](https://github.com/chrispathway/covid-ct-classifier/blob/main/classifier.ipynb), the trained weights and the README figures
 
 The original results, with slices split at random (70/15/15 per class, seed 42):
 
@@ -187,7 +187,7 @@ dataset/
 
 3. To try the model on your own CT slice, run the *Imports* cell and the last cell of `patient_split.ipynb`. Upload a JPG or PNG with the button. The cell shows the image, the probability for each class and the verdict: COVID-19 signs, no signs, or not enough lung visible. No training is needed, only the saved checkpoint.
 
-The original random-split notebook, `classifier.ipynb`, is still included for comparison.
+The original random-split notebook, `classifier.ipynb`, is in [chrispathway/covid-ct-classifier](https://github.com/chrispathway/covid-ct-classifier).
 
 ### Using a trained model
 
@@ -235,14 +235,14 @@ for name, idx in ckpt["class_to_idx"].items():
 .
 ├── audit/                                   Steps 1–5: rebuild scans and patient groups from the images
 ├── patient_split.ipynb                      Training and evaluation with the patient-separated split (my work)
-├── classifier.ipynb                         Original notebook with the random slice split (by @chrispathway)
-├── classifier.html                          Static export of the original notebook
 ├── outputs/checkpoints/
 │   └── mobilenet_v3_large.pth               Original trained model (random split)
 ├── assets/                                  Images used in this README
 ├── requirements.txt
 └── README.md
 ```
+
+The original notebook with the random slice split (`classifier.ipynb`) and its HTML export are in [chrispathway/covid-ct-classifier](https://github.com/chrispathway/covid-ct-classifier).
 
 ## Limitations
 
