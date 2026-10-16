@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv*/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/
+
+# Data (download it from Kaggle, see the notebook)
+dataset/
+Original CT Scans/
+Preprocessed CT Scans/
+
+# Training outputs and model weights, except the final trained model
+outputs/*
+!outputs/checkpoints/
+outputs/checkpoints/*
+*.pt
+*.pth
+!outputs/checkpoints/mobilenet_v3_large.pth
+archive.zip
+next steps.txt
+classifier.html
+classifier.ipynb
